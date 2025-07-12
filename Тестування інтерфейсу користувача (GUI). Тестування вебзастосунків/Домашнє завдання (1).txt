@@ -1,0 +1,40 @@
+﻿Mighty Beet 
+
+
+Елемент сайту
+	font-family
+	font-size
+	color
+	background-color
+	номер телефону у хедері
+
+
+	"Times New Roman"
+	16px
+	rgb(0, 0, 0)
+	rgb(0, 0, 0)
+	ім’я асистента при виклику чата допомоги
+
+
+	Roboto, sans-serif
+	15px
+	rgb(0, 0, 0)
+	rgba(0, 0, 0, 0)
+	кнопка “інші міста” у футері сайту
+
+
+	HelveticaNeue, sans-serif
+	14px
+	rgb(36, 167, 237)
+	rgb(36, 167, 237)
+	Placeholder “ім’я” у формі “ЗАПИСАТИСЯ НА ПРИЙОМ”
+
+
+	
+
+HelveticaNeue, sans-serif
+
+
+	14px
+	rgb(83, 83, 83)
+	rgb(255, 255, 255)
