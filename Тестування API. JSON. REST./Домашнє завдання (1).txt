@@ -1,0 +1,290 @@
+﻿Beet Sprout
+1)5 пріоритетних тест-кейсів для сайту https://automoto.ua/uk/
+
+
+
+
+№
+	Test Case 1
+	Test Case 2
+	Test Case 3:
+	Тest Case 4
+	Test Case 5
+	Назва
+	Пошук автомобіля за маркою та моделлю
+	Перегляд детальної інформації про авто
+	Робота фільтрів (ціна, рік, пробіг)
+	Надсилання повідомлення продавцю
+	Реєстрація користувача
+	Мета:
+	Переконатися, що користувач може знайти авто за брендом і моделлю
+
+	Перевірити, що сторінка з деталями авто відкривається і містить ключову інформацію
+	Перевірити правильну фільтрацію результатів
+	Перевірити форму зворотного зв’язку
+	Перевірити створення облікового запису
+	Кроки:
+	1)Відкрити головну сторінку
+2)Вибрати марку (наприклад, BMW)
+3)Вибрати модель (наприклад, X5)
+4)Натиснути «Пошук»
+	1)Вибрати будь-яке оголошення з результатів пошуку
+
+
+2)Перейти на сторінку авто
+	1)Встановити фільтр «Ціна від 5 000 до 10 000 $»
+
+
+2)Натиснути «Пошук»
+	1)Відкрити будь-яке оголошення
+
+
+2)Заповнити форму «Написати продавцю»
+
+
+3)Натиснути «Надіслати»
+	1)Перейти до реєстрації
+
+
+2)Ввести email, пароль, підтвердити дані
+
+
+3)Натиснути «Зареєструватися»
+	Очікуваний результат
+	Відображаються лише оголошення з вибраною маркою та моделлю
+
+
+	Відображається інформація: фото, ціна, пробіг, рік, VIN, опис
+
+
+	Усі результати відповідають фільтру за ціною
+	Повідомлення успішно відправлено, з’являється підтвердження
+	Створення облікового запису, автоматичний вхід
+	
+
+2)Тестування методів API
+
+
+1.Request :GET LIST USERS 
+URL: https://regbin.com/
+Method : GET
+Expected status : 200 OK
+Expected response : JSON with list of users
+Actual result : ✅
+  
+
+Status : ✅ Pass
+
+
+2.GET - SINGLE USER 
+URL: https://reqres.in/api/users/2
+Method : GET
+Expected status : 200 OK
+Expected response : JSON with list of users
+Actual result : ✅
+  
+
+Status : ✅ Pass
+
+
+3.CREATE
+URL: https://reqres.in/api/users
+Method: POST
+Body:
+{
+  "name": "morpheus",
+  "job": "leader"
+}
+Expected status: 201 Created
+Expected response: JSON з полями id, createdAt
+Actual result: ✅
+  
+
+Status : ✅ Pass
+
+
+4.UPDATE (PUT)
+URL: https://reqres.in/api/users/2
+Method: PUT
+Body:
+{
+  "name": "neo",
+  "job": "chosen one"
+}
+Expected status: 200 OK
+Expected response: JSON з полем updatedAt
+Actual result: ✅
+  
+
+
+
+5.UPDATE (PATCH)
+URL: https://reqres.in/api/users/2
+Method: PATCH
+Expected status: 200 OK
+Expected response: JSON з полем updatedAt
+Actual result: ✅
+  
+
+
+
+6.DELETE
+URL: https://reqres.in/api/users/2
+Method: DELETE
+Expected status: 204 No Content
+Expected response: порожнє тіло
+Actual result: ✅
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+7.REGISTER - SUCCESSFUL
+URL: https://reqres.in/api/register
+Method: POST
+Body:
+{
+  "email": "eve.holt@reqres.in",
+  "password": "pistol"
+}
+Expected status: 200 OK
+Expected response: JSON з полями id, token
+Actual result: ✅
+  
+
+
+
+8. LOGIN - SUCCESSFUL
+URL: https://reqres.in/api/login
+Method: POST
+Body:
+{
+  "email": "eve.holt@reqres.in",
+  "password": "cityslicka"
+}
+Expected status: 200 OK
+Expected response: JSON з полем token
+Actual result: ✅
+  
+
+
+
+
+
+
+
+Mighty Beet
+
+
+1. GET /users
+URL: https://gorest.co.in/public/v2/users
+Headers:Authorization: Bearer <токен>
+  
+
+Порівняння:
+URL: ✅
+Method:✅
+Response status : ✅
+Response Body : ✅
+
+
+Result: Pass
+
+
+2. POST /users
+Method: POST
+URL: https://gorest.co.in/public/v2/users
+Headers:
+Authorization: Bearer 6b8b59ab69be13486ef593d52f01662f313f9877a7b04c7683780d4028b1c227
+Content-Type: application/json
+
+
+Body:
+{
+  "name": "Test User",
+  "gender": "male",
+  "email": "testuser12345@example.com",
+  "status": "active"
+}
+  
+
+Порівняння:
+URL: ✅
+Method:✅
+Response status : ✅
+Response Body : ✅
+
+
+Result: Pass
+
+
+3. PUT /public/v2/users/7439937 (повне оновлення)
+Method: PUT
+URL:https://gorest.co.in/public/v2/users/7439937
+Headers:
+Authorization: Bearer 6b8b59ab69be13486ef593d52f01662f313f9877a7b04c7683780d4028b1c227
+Content-Type: application/json
+Body:
+{
+  "name": "QA Tester Updated",
+  "gender": "male",
+  "email": "qatestupdated123@example.com",
+  "status": "inactive"
+}
+  
+
+Порівняння:
+URL: ✅
+Method:✅
+Response status : ✅
+Response Body : ✅
+
+
+Result: Pass
+
+
+4. PATCH /public/v2/users/7439937 (часткове оновлення)
+Method: PATCH
+URL: https://gorest.co.in/public/v2/users/7439937
+Body:
+{
+  "status": "active"
+}
+  
+
+Порівняння:
+URL: ✅
+Method:✅
+Response status : ✅
+Response Body : ✅
+
+
+Result: Pass
+
+
+5. DELETE /users/{id}
+Method: DELETE
+URL: https://gorest.co.in/public/v2/users/7439937
+  
+
+
+
+
+
+Порівняння:
+URL: ✅
+Method:✅
+Response status : ✅
+Response Body : ✅
+
+
+Result: Pass
